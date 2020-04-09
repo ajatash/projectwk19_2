@@ -1,3 +1,4 @@
+// choose radius for circles baed on number of cases
 function chooseRadius(confirmed){
       var radius = 0
       if ( confirmed > 10000 ) radius = 14;
@@ -9,22 +10,12 @@ function chooseRadius(confirmed){
       else radius = 0;  // no data
       return radius;
     }
-// Store API query variables
-var url = "COVID19_Cases_US.geojson";
 
-// d3.json(url, function(response) {
-//   var covidData = response.features;
-//   console.log(covidData);
-//   createFeatures(response.features)
-//   });
-//
-// d3.json("MN_counties.geojson", function(response){
-//   var countiesData = response.features;
-//   console.log(countiesData);
-//   createFeatures(response.features)
-//   });
+// Store data query variables
+var url = "../data/COVID19_Cases_US.geojson";
 
-d3.json("MN_counties.geojson", function(response1) {
+// read in geojson
+d3.json("../data/MN_counties.geojson", function(response1) {
   d3.json(url, function(response2) {
     var covidData = response2.features;
     console.log(response2);
@@ -34,6 +25,7 @@ d3.json("MN_counties.geojson", function(response1) {
     });
   });
 
+// funtion to create and draw features
 function createFeatures(covidData, countiesData) {
   function oneachfeature(feature, layer) {
     layer.bindPopup("<h3>" + feature.properties.Combined_Key +
@@ -66,10 +58,11 @@ function createFeatures(covidData, countiesData) {
   })//.addTo(myMap);
 
 
-
+// call create map
   createMap(covid, counties);
 }
 
+// function to take created features and put them into a map
 function createMap(covid, counties){
 
     // Define streetmap and darkmap layers
@@ -115,6 +108,5 @@ function createMap(covid, counties){
       collapsed: false
     }).addTo(myMap);
 
-    // legend.addTo(myMap);
 
 }
