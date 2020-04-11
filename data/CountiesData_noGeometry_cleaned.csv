@@ -1,0 +1,88 @@
+ID,Name,Population,Median Age,TotalAgeOvr65,Percent Age Ovr 65
+0,"Wilkin County, Minnesota",6398,44.3,1177,0.18
+1,"Red Lake County, Minnesota",4017,42.2,764,0.19
+2,"Aitkin County, Minnesota",15841,54.5,4977,0.31
+3,"Clay County, Minnesota",62040,32.6,7875,0.13
+4,"Faribault County, Minnesota",13966,46.8,3114,0.22
+5,"Murray County, Minnesota",8394,48.1,2063,0.25
+6,"Fillmore County, Minnesota",20825,42.5,4180,0.2
+7,"Kandiyohi County, Minnesota",42577,39.5,7448,0.17
+8,"Lake County, Minnesota",10578,50.3,2584,0.24
+9,"Polk County, Minnesota",31564,38.7,5500,0.17
+10,"Rock County, Minnesota",9433,40.9,1836,0.19
+11,"Roseau County, Minnesota",15537,41.4,2447,0.16
+12,"Sibley County, Minnesota",14888,41.6,2605,0.17
+13,"Traverse County, Minnesota",3357,48.6,853,0.25
+14,"Watonwan County, Minnesota",10936,39.9,2119,0.19
+15,"Becker County, Minnesota",33552,41.8,6518,0.19
+16,"Hennepin County, Minnesota",1224763,36.3,158332,0.13
+17,"Big Stone County, Minnesota",5039,49,1269,0.25
+18,"Brown County, Minnesota",25243,42.5,5076,0.2
+19,"Chippewa County, Minnesota",12040,43,2446,0.2
+20,"Cass County, Minnesota",28810,48.7,6987,0.24
+21,"Clearwater County, Minnesota",8824,42.7,1742,0.2
+22,"Goodhue County, Minnesota",46138,42.9,8369,0.18
+23,"Hubbard County, Minnesota",20743,48.6,4985,0.24
+24,"Isanti County, Minnesota",38584,39.5,5593,0.14
+25,"Jackson County, Minnesota",10104,44,2066,0.2
+26,"Martin County, Minnesota",20084,45.2,4462,0.22
+27,"Mower County, Minnesota",39386,39.3,7194,0.18
+28,"Nobles County, Minnesota",21854,36,3382,0.15
+29,"Pine County, Minnesota",29057,44.5,5489,0.19
+30,"Olmsted County, Minnesota",151685,37.1,21498,0.14
+31,"Cottonwood County, Minnesota",11437,43.3,2538,0.22
+32,"Scott County, Minnesota",141463,36,13567,0.1
+33,"Dodge County, Minnesota",20485,38,2804,0.14
+34,"Wabasha County, Minnesota",21490,45,4322,0.2
+35,"Pipestone County, Minnesota",9229,42.4,1883,0.2
+36,"Crow Wing County, Minnesota",63505,44.1,13321,0.21
+37,"Norman County, Minnesota",6589,44.3,1404,0.21
+38,"Wright County, Minnesota",131130,36.2,15019,0.11
+39,"Nicollet County, Minnesota",33477,36.3,4933,0.15
+40,"Douglas County, Minnesota",36891,44.3,7967,0.22
+41,"Grant County, Minnesota",5923,45.3,1366,0.23
+42,"Kittson County, Minnesota",4384,47.9,1027,0.23
+43,"Le Sueur County, Minnesota",27810,41.4,4588,0.16
+44,"Mahnomen County, Minnesota",5500,35.7,933,0.17
+45,"Chisago County, Minnesota",54297,40.9,7627,0.14
+46,"Redwood County, Minnesota",15430,43.5,3229,0.21
+47,"Yellow Medicine County, Minnesota",9930,42.6,1954,0.2
+48,"Todd County, Minnesota",24423,43.7,4924,0.2
+49,"Beltrami County, Minnesota",45847,33.4,6724,0.15
+50,"Blue Earth County, Minnesota",65767,30.6,8451,0.13
+51,"Houston County, Minnesota",18709,45.4,3734,0.2
+52,"Lac qui Parle County, Minnesota",6840,50,1736,0.25
+53,"Lake of the Woods County, Minnesota",3841,51.1,846,0.22
+54,"Otter Tail County, Minnesota",57790,46.6,12979,0.22
+55,"Waseca County, Minnesota",18898,39.6,3108,0.16
+56,"St. Louis County, Minnesota",200294,41,35541,0.18
+57,"Anoka County, Minnesota",344861,38.2,43117,0.13
+58,"Stearns County, Minnesota",155300,34.1,21391,0.14
+59,"Dakota County, Minnesota",414655,37.7,52234,0.13
+60,"Lincoln County, Minnesota",5724,45.9,1401,0.24
+61,"Lyon County, Minnesota",25789,35.6,3801,0.15
+62,"Marshall County, Minnesota",9397,43.4,1893,0.2
+63,"Mille Lacs County, Minnesota",25635,40.1,4487,0.18
+64,"Renville County, Minnesota",14798,44.4,2979,0.2
+65,"Washington County, Minnesota",250979,39.2,33303,0.13
+66,"Carlton County, Minnesota",35408,40.7,5835,0.16
+67,"Cook County, Minnesota",5270,52.1,1378,0.26
+68,"Kanabec County, Minnesota",15948,44.5,3080,0.19
+69,"Koochiching County, Minnesota",12776,48.6,2839,0.22
+70,"Meeker County, Minnesota",23105,42.2,4255,0.18
+71,"Morrison County, Minnesota",32880,41.7,5923,0.18
+72,"Pennington County, Minnesota",14197,39.5,2448,0.17
+73,"Rice County, Minnesota",65251,36.6,9407,0.14
+74,"Steele County, Minnesota",36612,39.3,5941,0.16
+75,"Sherburne County, Minnesota",92024,35.9,9482,0.1
+76,"Wadena County, Minnesota",13626,41.7,2871,0.21
+77,"Benton County, Minnesota",39360,35.6,5210,0.13
+78,"Carver County, Minnesota",98799,37.2,10302,0.1
+79,"Freeborn County, Minnesota",30619,44.3,6643,0.22
+80,"Itasca County, Minnesota",45237,45.9,9683,0.21
+81,"McLeod County, Minnesota",35816,40.4,6351,0.18
+82,"Pope County, Minnesota",10932,45.9,2505,0.23
+83,"Ramsey County, Minnesota",537893,34.8,71903,0.13
+84,"Stevens County, Minnesota",9759,33.1,1675,0.17
+85,"Swift County, Minnesota",9448,44.1,2017,0.21
+86,"Winona County, Minnesota",50992,34.5,7889,0.15
