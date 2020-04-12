@@ -32,19 +32,46 @@ function createFeatures(covidData, countiesData) {
       "</h3><hr><p>Confirmed cases:" + (feature.properties.Confirmed) +
        "</p><hr><p>" + new Date(feature.properties.Last_Update) + "</p>");
   }
-  var mapStyle = {
-    color: "orange",
-    fillColor: "",
-    fillOpacity: 0,
-    weight: 2
-  };
-  var counties = L.geoJson(countiesData, {
-    // Passing in our style object
-    style: mapStyle,
-    onEachFeature: function( feature, layer ){
-      layer.bindPopup( "<h3>Population: " + feature.properties.Population + "</h3>")
+  // var mapStyle = {
+  //   color: "orange",
+  //   fillColor: "",
+  //   fillOpacity: 0,
+  //   weight: 2
+  // };
+  // var counties = L.geoJson(countiesData, {
+  //   // Passing in our style object
+  //   style: mapStyle,
+  //   onEachFeature: function( feature, layer ){
+  //     layer.bindPopup( "<h3>Population: " + feature.properties.Population + "</h3>")
+  //   }
+  // });
+
+  // Create a new choropleth layer
+  var counties = L.choropleth(countiesData, {
+
+    // Define what  property in the features to use
+    valueProperty: "Percent Age Ovr 65",
+
+    // Set color scale
+    scale: ["#ffffb2", "#b10026"],
+
+    // Number of breaks in step range
+    steps: 5,
+
+    // q for quartile, e for equidistant, k for k-means
+    mode: "q",
+    style: {
+      // Border color
+      color: "#fff",
+      weight: 1,
+      fillOpacity: 0.8
+    },
+
+    // Binding a pop-up to each layer
+    onEachFeature: function(feature, layer) {
+      layer.bindPopup( "<h3>Population: " + feature.properties.Population + "</h3>");
     }
-  });
+  })
   var covid = L.geoJson(covidData, {
     onEachFeature: oneachfeature,
     pointToLayer: function(feature,latlng){
