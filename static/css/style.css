@@ -31,21 +31,19 @@ font-family: proxima-nova, sans-serif;
 }
 
 .navbar {
-  background-image: url("covidbanner3.png");
+  background-image: url("covidbanner.svg");
   background-size: cover;
   width: 100%;
   height: 100%;
   background-repeat: no-repeat;
-  padding: 2%;
-  
 }
 .img-size {
 max-width: 100%;
 }
 
 .img-card {
-max-width: 90%;
-max-height: 90%;
+max-width: 96%;
+max-height: 96%;
 }
 
 
@@ -56,7 +54,7 @@ max-height: 90%;
   z-index: 1; /* Stay on top */
   top: 0;
   left: 0;
-  background-color: #3e4a5c; /* Black*/
+  background-color: #505050; /* Black*/
   overflow-x: hidden; /* Disable horizontal scroll */
   padding-top: 60px; /* Place content 60px from the top */
   transition: 0.5s; /* 0.5 second transition effect to slide in the sidebar */
@@ -67,7 +65,7 @@ max-height: 90%;
   padding: 8px 8px 8px 32px;
   text-decoration: none;
   font-size: 25px;
-  color: #dbdbd3;
+  color: #ffffff;
   display: block;
   transition: 0.3s;
 }
@@ -120,7 +118,6 @@ max-height: 90%;
 .flip-card {
   background-color: transparent;
   width: 100%;
-  height: 600px;
   perspective: 500px; /* Remove this if you don't want the 3D effect */
 }
 
@@ -128,7 +125,7 @@ max-height: 90%;
 .flip-card-inner {
   position: relative;
   width: 100%;
-  height: 100%;
+  height: fit-content;
   text-align: left;
   transition: transform 0.6s;
   transform-style: preserve-3d;
@@ -144,7 +141,7 @@ max-height: 90%;
   position: absolute;
   width: 100%;
   padding: 4%;
-  height: 100%;
+  height: fit-content;
   -webkit-backface-visibility: hidden; /* Safari */
   backface-visibility: hidden;
  
@@ -159,6 +156,7 @@ max-height: 90%;
   height: 100%;
   background-image: url(../Images/paper_2.png);
   background-size: 100%;
+  height: fit-content;
 
 }
 
@@ -189,7 +187,7 @@ max-height: 90%;
 }
 
 #main {
-  height: 140px;
+  height: 150px;
   width: 100%;
  
 }
