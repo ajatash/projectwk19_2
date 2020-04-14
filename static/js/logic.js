@@ -1,3 +1,8 @@
+// test pulling in county data
+$.getJSON("/data", function(data) {
+  console.log(data);
+})
+
 // Creating map object
 var myMap = L.map("map", {
   center: [46.000996, -94.789513],
