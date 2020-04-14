@@ -1,7 +1,7 @@
-// test pulling in county data
-$.getJSON("/data", function(data) {
-  console.log(data);
-})
+// // test pulling in county tabular data
+// $.getJSON("/data", function(data) {
+//   console.log(data);
+// })
 
 // Creating map object
 var myMap = L.map("map", {
@@ -24,11 +24,11 @@ L.tileLayer("https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={
 }).addTo(myMap);
 
 
-// Load in geojson data
-var geoData = "../data/MN_counties.geojson";
+//// local file
+// var geoData = "../data/MN_counties.geojson";
 
-// Grab data with d3
-$.getJSON(geoData, function(data) {
+// Grab data with jquery from flask app
+$.getJSON("/geodata", function(data) {
   console.log(data);
 
   var counties;
@@ -129,7 +129,7 @@ $.getJSON(geoData, function(data) {
     var labels = [];
 
     // Add min & max
-    var legendInfo = "<h3>Percent Population over 65</h3>" +
+    var legendInfo = "<h5>Percent Population over 65</h5>" +
       "<div class=\"labels\">" +
         "<div class=\"min\">" + limits[0] + "</div>" +
         "<div class=\"max\">" + limits[limits.length - 1] + "</div>" +
@@ -161,9 +161,12 @@ function chooseRadius(confirmed){
       else radius = 0;  // no data
       return radius;
     }
-var url = "../data/COVID19_Cases_US.geojson";
 
-$.getJSON(url, function(data) {
+// local file
+// var covid_geojson = "../data/COVID19_Cases_US.geojson";
+
+// Grab data with jquery from flask app
+$.getJSON("/covid_geodata", function(data) {
   var covidData = data.features;
   function oneachfeature(feature, layer) {
     // https://gis.stackexchange.com/questions/166252/geojson-layer-order-in-leaflet-0-7-5/167904#167904
