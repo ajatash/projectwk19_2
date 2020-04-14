@@ -7,11 +7,16 @@
   <title>COVID - 19</title>
 
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://npmcdn.com/react-bootstrap-table/dist/react-bootstrap-table.min.css">
+  <link rel="stylesheet" type="text/css" href="../static/css/style.css">
+  <link rel="stylesheet" type="text/css" href="../static/css/reset.css">
+  <link rel="stylesheet" href="https://use.typekit.net/pgk0jfq.css">
+  <link rel="stylesheet" href="sort-table.css">
+  <script type="text/javascript" src="../static/js/sort-table.js"></script>
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-  <link rel="stylesheet" type="text/css" href="../static/css/style.css">
-  <link rel="stylesheet" href="https://use.typekit.net/pgk0jfq.css">
- 
+  
+
 </head>
 <body>
   <div class="container-fluid">
@@ -41,12 +46,734 @@
   </script>
 </nav>
   </div>  
-  <!-- Leaflet JavaScript -->
-  <!-- <script src="https://unpkg.com/leaflet@1.0.0-rc.3/dist/leaflet.js"></script> -->
-  <!-- D3 JavaScript -->
-  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/d3/4.2.3/d3.min.js"></script>
-  <!-- Our JavaScript -->
-  <script type="text/javascript" src="static/js/config.js"></script>
-  <script type="text/javascript" src="static/js/logic4.js"></script>
-</body>
-</html>
+  <div class="divider-gradient">
+  </div>
+  <div class="col-md-12" id="Cover">
+    <br>
+    <h2 style="font-size: xx-large; font-weight: bold;">Age Demographics by County</h2><br>
+    <br>
+    <p>The data in the following table was used for plotting for this project.</p>
+    <br>
+  <div class="table-wrapper-scroll-y my-custom-scrollbar">
+    <table width="100%" class="table js-sort-table table-bordered table-striped mb-0", style="font-family: district-pro, sans-serif; width: 100%;">
+        <thead>
+          <tr>
+            <th scope="col">ID</th>
+            <th scope="col">Name</th>
+            <th scope="col">Population</th>
+            <th scope="col">Median Age</th>
+            <th scope="col">TotalAgeOvr65</th>
+            <th scope="col">Percent Age Ovr 65</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>0</td>
+            <td>Wilkin County, Minnesota</td>
+            <td>6398</td>
+            <td>44.3</td>
+            <td>1177</td>
+            <td>0.18</td>
+          </tr>
+          <tr>
+            <td>1</td>
+            <td>Red Lake County, Minnesota</td>
+            <td>4017</td>
+            <td>42.2</td>
+            <td>764</td>
+            <td>0.19</td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td>Aitkin County, Minnesota</td>
+            <td>15841</td>
+            <td>54.5</td>
+            <td>4977</td>
+            <td>0.31</td>
+          </tr>
+          <tr>
+            <td>3</td>
+            <td>Clay County, Minnesota</td>
+            <td>62040</td>
+            <td>32.6</td>
+            <td>7875</td>
+            <td>0.13</td>
+          </tr>
+          <tr>
+            <td>4</td>
+            <td>Faribault County, Minnesota</td>
+            <td>13966</td>
+            <td>46.8</td>
+            <td>3114</td>
+            <td>0.22</td>
+          </tr>
+          <tr>
+            <td>5</td>
+            <td>Murray County, Minnesota</td>
+            <td>8394</td>
+            <td>48.1</td>
+            <td>2063</td>
+            <td>0.25</td>
+          </tr>
+          <tr>
+            <td>6</td>
+            <td>Fillmore County, Minnesota</td>
+            <td>20825</td>
+            <td>42.5</td>
+            <td>4180</td>
+            <td>0.20</td>
+          </tr>
+          <tr>
+            <td>7</td>
+            <td>Kandiyohi County, Minnesota</td>
+            <td>42577</td>
+            <td>39.5</td>
+            <td>7448</td>
+            <td>0.17</td>
+          </tr>
+          <tr>
+            <td>8</td>
+            <td>Lake County, Minnesota</td>
+            <td>10578</td>
+            <td>50.3</td>
+            <td>2584</td>
+            <td>0.24</td>
+          </tr>
+          <tr>
+            <td>9</td>
+            <td>Polk County, Minnesota</td>
+            <td>31564</td>
+            <td>38.7</td>
+            <td>5500</td>
+            <td>0.17</td>
+          </tr>
+          <tr>
+            <td>10</td>
+            <td>Rock County, Minnesota</td>
+            <td>9433</td>
+            <td>40.9</td>
+            <td>1836</td>
+            <td>0.19</td>
+          </tr>
+          <tr>
+            <td>11</td>
+            <td>Roseau County, Minnesota</td>
+            <td>15537</td>
+            <td>41.4</td>
+            <td>2447</td>
+            <td>0.16</td>
+          </tr>
+          <tr>
+            <td>12</td>
+            <td>Sibley County, Minnesota</td>
+            <td>14888</td>
+            <td>41.6</td>
+            <td>2605</td>
+            <td>0.17</td>
+          </tr>
+          <tr>
+            <td>13</td>
+            <td>Traverse County, Minnesota</td>
+            <td>3357</td>
+            <td>48.6</td>
+            <td>853</td>
+            <td>0.25</td>
+          </tr>
+          <tr>
+            <td>14</td>
+            <td>Watonwan County, Minnesota</td>
+            <td>10936</td>
+            <td>39.9</td>
+            <td>2119</td>
+            <td>0.19</td>
+          </tr>
+          <tr>
+            <td>15</td>
+            <td>Becker County, Minnesota</td>
+            <td>33552</td>
+            <td>41.8</td>
+            <td>6518</td>
+            <td>0.19</td>
+          </tr>
+          <tr>
+            <td>16</td>
+            <td>Hennepin County, Minnesota</td>
+            <td>1224763</td>
+            <td>36.3</td>
+            <td>158332</td>
+            <td>0.13</td>
+          </tr>
+          <tr>
+            <td>17</td>
+            <td>Big Stone County, Minnesota</td>
+            <td>5039</td>
+            <td>49.0</td>
+            <td>1269</td>
+            <td>0.25</td>
+          </tr>
+          <tr>
+            <td>18</td>
+            <td>Brown County, Minnesota</td>
+            <td>25243</td>
+            <td>42.5</td>
+            <td>5076</td>
+            <td>0.20</td>
+          </tr>
+          <tr>
+            <td>19</td>
+            <td>Chippewa County, Minnesota</td>
+            <td>12040</td>
+            <td>43.0</td>
+            <td>2446</td>
+            <td>0.20</td>
+          </tr>
+          <tr>
+            <td>20</td>
+            <td>Cass County, Minnesota</td>
+            <td>28810</td>
+            <td>48.7</td>
+            <td>6987</td>
+            <td>0.24</td>
+          </tr>
+          <tr>
+            <td>21</td>
+            <td>Clearwater County, Minnesota</td>
+            <td>8824</td>
+            <td>42.7</td>
+            <td>1742</td>
+            <td>0.20</td>
+          </tr>
+          <tr>
+            <td>22</td>
+            <td>Goodhue County, Minnesota</td>
+            <td>46138</td>
+            <td>42.9</td>
+            <td>8369</td>
+            <td>0.18</td>
+          </tr>
+          <tr>
+            <td>23</td>
+            <td>Hubbard County, Minnesota</td>
+            <td>20743</td>
+            <td>48.6</td>
+            <td>4985</td>
+            <td>0.24</td>
+          </tr>
+          <tr>
+            <td>24</td>
+            <td>Isanti County, Minnesota</td>
+            <td>38584</td>
+            <td>39.5</td>
+            <td>5593</td>
+            <td>0.14</td>
+          </tr>
+          <tr>
+            <td>25</td>
+            <td>Jackson County, Minnesota</td>
+            <td>10104</td>
+            <td>44.0</td>
+            <td>2066</td>
+            <td>0.20</td>
+          </tr>
+          <tr>
+            <td>26</td>
+            <td>Martin County, Minnesota</td>
+            <td>20084</td>
+            <td>45.2</td>
+            <td>4462</td>
+            <td>0.22</td>
+          </tr>
+          <tr>
+            <td>27</td>
+            <td>Mower County, Minnesota</td>
+            <td>39386</td>
+            <td>39.3</td>
+            <td>7194</td>
+            <td>0.18</td>
+          </tr>
+          <tr>
+            <td>28</td>
+            <td>Nobles County, Minnesota</td>
+            <td>21854</td>
+            <td>36.0</td>
+            <td>3382</td>
+            <td>0.15</td>
+          </tr>
+          <tr>
+            <td>29</td>
+            <td>Pine County, Minnesota</td>
+            <td>29057</td>
+            <td>44.5</td>
+            <td>5489</td>
+            <td>0.19</td>
+          </tr>
+          <tr>
+            <td>30</td>
+            <td>Olmsted County, Minnesota</td>
+            <td>151685</td>
+            <td>37.1</td>
+            <td>21498</td>
+            <td>0.14</td>
+          </tr>
+          <tr>
+            <td>31</td>
+            <td>Cottonwood County, Minnesota</td>
+            <td>11437</td>
+            <td>43.3</td>
+            <td>2538</td>
+            <td>0.22</td>
+          </tr>
+          <tr>
+            <td>32</td>
+            <td>Scott County, Minnesota</td>
+            <td>141463</td>
+            <td>36.0</td>
+            <td>13567</td>
+            <td>0.10</td>
+          </tr>
+          <tr>
+            <td>33</td>
+            <td>Dodge County, Minnesota</td>
+            <td>20485</td>
+            <td>38.0</td>
+            <td>2804</td>
+            <td>0.14</td>
+          </tr>
+          <tr>
+            <td>34</td>
+            <td>Wabasha County, Minnesota</td>
+            <td>21490</td>
+            <td>45.0</td>
+            <td>4322</td>
+            <td>0.20</td>
+          </tr>
+          <tr>
+            <td>35</td>
+            <td>Pipestone County, Minnesota</td>
+            <td>9229</td>
+            <td>42.4</td>
+            <td>1883</td>
+            <td>0.20</td>
+          </tr>
+          <tr>
+            <td>36</td>
+            <td>Crow Wing County, Minnesota</td>
+            <td>63505</td>
+            <td>44.1</td>
+            <td>13321</td>
+            <td>0.21</td>
+          </tr>
+          <tr>
+            <td>37</td>
+            <td>Norman County, Minnesota</td>
+            <td>6589</td>
+            <td>44.3</td>
+            <td>1404</td>
+            <td>0.21</td>
+          </tr>
+          <tr>
+            <td>38</td>
+            <td>Wright County, Minnesota</td>
+            <td>131130</td>
+            <td>36.2</td>
+            <td>15019</td>
+            <td>0.11</td>
+          </tr>
+          <tr>
+            <td>39</td>
+            <td>Nicollet County, Minnesota</td>
+            <td>33477</td>
+            <td>36.3</td>
+            <td>4933</td>
+            <td>0.15</td>
+          </tr>
+          <tr>
+            <td>40</td>
+            <td>Douglas County, Minnesota</td>
+            <td>36891</td>
+            <td>44.3</td>
+            <td>7967</td>
+            <td>0.22</td>
+          </tr>
+          <tr>
+            <td>41</td>
+            <td>Grant County, Minnesota</td>
+            <td>5923</td>
+            <td>45.3</td>
+            <td>1366</td>
+            <td>0.23</td>
+          </tr>
+          <tr>
+            <td>42</td>
+            <td>Kittson County, Minnesota</td>
+            <td>4384</td>
+            <td>47.9</td>
+            <td>1027</td>
+            <td>0.23</td>
+          </tr>
+          <tr>
+            <td>43</td>
+            <td>Le Sueur County, Minnesota</td>
+            <td>27810</td>
+            <td>41.4</td>
+            <td>4588</td>
+            <td>0.16</td>
+          </tr>
+          <tr>
+            <td>44</td>
+            <td>Mahnomen County, Minnesota</td>
+            <td>5500</td>
+            <td>35.7</td>
+            <td>933</td>
+            <td>0.17</td>
+          </tr>
+          <tr>
+            <td>45</td>
+            <td>Chisago County, Minnesota</td>
+            <td>54297</td>
+            <td>40.9</td>
+            <td>7627</td>
+            <td>0.14</td>
+          </tr>
+          <tr>
+            <td>46</td>
+            <td>Redwood County, Minnesota</td>
+            <td>15430</td>
+            <td>43.5</td>
+            <td>3229</td>
+            <td>0.21</td>
+          </tr>
+          <tr>
+            <td>47</td>
+            <td>Yellow Medicine County, Minnesota</td>
+            <td>9930</td>
+            <td>42.6</td>
+            <td>1954</td>
+            <td>0.20</td>
+          </tr>
+          <tr>
+            <td>48</td>
+            <td>Todd County, Minnesota</td>
+            <td>24423</td>
+            <td>43.7</td>
+            <td>4924</td>
+            <td>0.20</td>
+          </tr>
+          <tr>
+            <td>49</td>
+            <td>Beltrami County, Minnesota</td>
+            <td>45847</td>
+            <td>33.4</td>
+            <td>6724</td>
+            <td>0.15</td>
+          </tr>
+          <tr>
+            <td>50</td>
+            <td>Blue Earth County, Minnesota</td>
+            <td>65767</td>
+            <td>30.6</td>
+            <td>8451</td>
+            <td>0.13</td>
+          </tr>
+          <tr>
+            <td>51</td>
+            <td>Houston County, Minnesota</td>
+            <td>18709</td>
+            <td>45.4</td>
+            <td>3734</td>
+            <td>0.20</td>
+          </tr>
+          <tr>
+            <td>52</td>
+            <td>Lac qui Parle County, Minnesota</td>
+            <td>6840</td>
+            <td>50.0</td>
+            <td>1736</td>
+            <td>0.25</td>
+          </tr>
+          <tr>
+            <td>53</td>
+            <td>Lake of the Woods County, Minnesota</td>
+            <td>3841</td>
+            <td>51.1</td>
+            <td>846</td>
+            <td>0.22</td>
+          </tr>
+          <tr>
+            <td>54</td>
+            <td>Otter Tail County, Minnesota</td>
+            <td>57790</td>
+            <td>46.6</td>
+            <td>12979</td>
+            <td>0.22</td>
+          </tr>
+          <tr>
+            <td>55</td>
+            <td>Waseca County, Minnesota</td>
+            <td>18898</td>
+            <td>39.6</td>
+            <td>3108</td>
+            <td>0.16</td>
+          </tr>
+          <tr>
+            <td>56</td>
+            <td>St. Louis County, Minnesota</td>
+            <td>200294</td>
+            <td>41.0</td>
+            <td>35541</td>
+            <td>0.18</td>
+          </tr>
+          <tr>
+            <td>57</td>
+            <td>Anoka County, Minnesota</td>
+            <td>344861</td>
+            <td>38.2</td>
+            <td>43117</td>
+            <td>0.13</td>
+          </tr>
+          <tr>
+            <td>58</td>
+            <td>Stearns County, Minnesota</td>
+            <td>155300</td>
+            <td>34.1</td>
+            <td>21391</td>
+            <td>0.14</td>
+          </tr>
+          <tr>
+            <td>59</td>
+            <td>Dakota County, Minnesota</td>
+            <td>414655</td>
+            <td>37.7</td>
+            <td>52234</td>
+            <td>0.13</td>
+          </tr>
+          <tr>
+            <td>60</td>
+            <td>Lincoln County, Minnesota</td>
+            <td>5724</td>
+            <td>45.9</td>
+            <td>1401</td>
+            <td>0.24</td>
+          </tr>
+          <tr>
+            <td>61</td>
+            <td>Lyon County, Minnesota</td>
+            <td>25789</td>
+            <td>35.6</td>
+            <td>3801</td>
+            <td>0.15</td>
+          </tr>
+          <tr>
+            <td>62</td>
+            <td>Marshall County, Minnesota</td>
+            <td>9397</td>
+            <td>43.4</td>
+            <td>1893</td>
+            <td>0.20</td>
+          </tr>
+          <tr>
+            <td>63</td>
+            <td>Mille Lacs County, Minnesota</td>
+            <td>25635</td>
+            <td>40.1</td>
+            <td>4487</td>
+            <td>0.18</td>
+          </tr>
+          <tr>
+            <td>64</td>
+            <td>Renville County, Minnesota</td>
+            <td>14798</td>
+            <td>44.4</td>
+            <td>2979</td>
+            <td>0.20</td>
+          </tr>
+          <tr>
+            <td>65</td>
+            <td>Washington County, Minnesota</td>
+            <td>250979</td>
+            <td>39.2</td>
+            <td>33303</td>
+            <td>0.13</td>
+          </tr>
+          <tr>
+            <td>66</td>
+            <td>Carlton County, Minnesota</td>
+            <td>35408</td>
+            <td>40.7</td>
+            <td>5835</td>
+            <td>0.16</td>
+          </tr>
+          <tr>
+            <td>67</td>
+            <td>Cook County, Minnesota</td>
+            <td>5270</td>
+            <td>52.1</td>
+            <td>1378</td>
+            <td>0.26</td>
+          </tr>
+          <tr>
+            <td>68</td>
+            <td>Kanabec County, Minnesota</td>
+            <td>15948</td>
+            <td>44.5</td>
+            <td>3080</td>
+            <td>0.19</td>
+          </tr>
+          <tr>
+            <td>69</td>
+            <td>Koochiching County, Minnesota</td>
+            <td>12776</td>
+            <td>48.6</td>
+            <td>2839</td>
+            <td>0.22</td>
+          </tr>
+          <tr>
+            <td>70</td>
+            <td>Meeker County, Minnesota</td>
+            <td>23105</td>
+            <td>42.2</td>
+            <td>4255</td>
+            <td>0.18</td>
+          </tr>
+          <tr>
+            <td>71</td>
+            <td>Morrison County, Minnesota</td>
+            <td>32880</td>
+            <td>41.7</td>
+            <td>5923</td>
+            <td>0.18</td>
+          </tr>
+          <tr>
+            <td>72</td>
+            <td>Pennington County, Minnesota</td>
+            <td>14197</td>
+            <td>39.5</td>
+            <td>2448</td>
+            <td>0.17</td>
+          </tr>
+          <tr>
+            <td>73</td>
+            <td>Rice County, Minnesota</td>
+            <td>65251</td>
+            <td>36.6</td>
+            <td>9407</td>
+            <td>0.14</td>
+          </tr>
+          <tr>
+            <td>74</td>
+            <td>Steele County, Minnesota</td>
+            <td>36612</td>
+            <td>39.3</td>
+            <td>5941</td>
+            <td>0.16</td>
+          </tr>
+          <tr>
+            <td>75</td>
+            <td>Sherburne County, Minnesota</td>
+            <td>92024</td>
+            <td>35.9</td>
+            <td>9482</td>
+            <td>0.10</td>
+          </tr>
+          <tr>
+            <td>76</td>
+            <td>Wadena County, Minnesota</td>
+            <td>13626</td>
+            <td>41.7</td>
+            <td>2871</td>
+            <td>0.21</td>
+          </tr>
+          <tr>
+            <td>77</td>
+            <td>Benton County, Minnesota</td>
+            <td>39360</td>
+            <td>35.6</td>
+            <td>5210</td>
+            <td>0.13</td>
+          </tr>
+          <tr>
+            <td>78</td>
+            <td>Carver County, Minnesota</td>
+            <td>98799</td>
+            <td>37.2</td>
+            <td>10302</td>
+            <td>0.10</td>
+          </tr>
+          <tr>
+            <td>79</td>
+            <td>Freeborn County, Minnesota</td>
+            <td>30619</td>
+            <td>44.3</td>
+            <td>6643</td>
+            <td>0.22</td>
+          </tr>
+          <tr>
+            <td>80</td>
+            <td>Itasca County, Minnesota</td>
+            <td>45237</td>
+            <td>45.9</td>
+            <td>9683</td>
+            <td>0.21</td>
+          </tr>
+          <tr>
+            <td>81</td>
+            <td>McLeod County, Minnesota</td>
+            <td>35816</td>
+            <td>40.4</td>
+            <td>6351</td>
+            <td>0.18</td>
+          </tr>
+          <tr>
+            <td>82</td>
+            <td>Pope County, Minnesota</td>
+            <td>10932</td>
+            <td>45.9</td>
+            <td>2505</td>
+            <td>0.23</td>
+          </tr>
+          <tr>
+            <td>83</td>
+            <td>Ramsey County, Minnesota</td>
+            <td>537893</td>
+            <td>34.8</td>
+            <td>71903</td>
+            <td>0.13</td>
+          </tr>
+          <tr>
+            <td>84</td>
+            <td>Stevens County, Minnesota</td>
+            <td>9759</td>
+            <td>33.1</td>
+            <td>1675</td>
+            <td>0.17</td>
+          </tr>
+          <tr>
+            <td>85</td>
+            <td>Swift County, Minnesota</td>
+            <td>9448</td>
+            <td>44.1</td>
+            <td>2017</td>
+            <td>0.21</td>
+          </tr>
+          <tr>
+            <td>86</td>
+            <td>Winona County, Minnesota</td>
+            <td>50992</td>
+            <td>34.5</td>
+            <td>7889</td>
+            <td>0.15</td>
+          </tr>
+        </tbody>
+      </table>
+
+   <!-- Leaflet JavaScript -->
+   <script src="https://unpkg.com/leaflet@1.0.0-rc.3/dist/leaflet.js"></script>
+   <!-- D3 JavaScript -->
+   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/d3/4.2.3/d3.min.js"></script>
+   <!-- Our JavaScript -->
+   <script type="text/javascript" src="../static/js/config.js"></script>
+   <script type="text/javascript" src="../static/js/choropleth.js"></script>
+   <script type="text/javascript" src="../static/js/logic.js"></script>
+  
+ </body>
+ </html>

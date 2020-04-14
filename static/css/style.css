@@ -1,5 +1,5 @@
 html, body {
-  background-color: #f2f2ed;
+  background-color: #bebaba;
   height: 100%;
   width: 100%;
   font-family: district-pro, sans-serif;
@@ -34,18 +34,12 @@ font-family: proxima-nova, sans-serif;
   background-image: url("covidbanner.svg");
   background-size: cover;
   width: 100%;
-  height: 100%;
+
   background-repeat: no-repeat;
 }
-.img-size {
-max-width: 100%;
+.navbar-expand-lg {
+  height: 250px;
 }
-
-.img-card {
-max-width: 96%;
-max-height: 96%;
-}
-
 
 .sidebar {
   height: 100%; /* 100% Full-height */
@@ -87,6 +81,7 @@ max-height: 96%;
 /* The button used to open the sidebar */
 .openbtn {
   font-size: 20px;
+  font-family: district-pro, sans-serif;
   cursor: pointer;
   background-color: none;
   color: rgb(44, 43, 43);
@@ -101,7 +96,7 @@ max-height: 96%;
 /* Style page content - use this if you want to push the page content to the right when you open the side navigation */
 #main {
   transition: margin-left .5s; /* If you want a transition effect */
-  padding: 20px;
+  padding: 10px;
 }
 
 /* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
@@ -112,11 +107,23 @@ max-height: 96%;
 
 .container-fluid {
   background-size: 100%;
+  padding: 0%;
+  margin: 0%;
+  font-family: district-pro, sans-serif;
+ 
 
 }
+.img-size {
+  max-width: 100%;
+  }
+  
+  .img-card {
+  max-width: 96%;
+  max-height: 96%;
+  }
+  
 
 .flip-card {
-  background-color: transparent;
   width: 100%;
   perspective: 500px; /* Remove this if you don't want the 3D effect */
 }
@@ -153,24 +160,21 @@ max-height: 96%;
   -moz-box-shadow: 10px 10px 34px -10px rgba(62,74,92,0.82);
   box-shadow: 10px 10px 34px -10px rgba(62,74,92,0.82);
   color: rgb(44, 43, 43);
-  height: 100%;
-  background-image: url(../Images/paper_2.png);
-  background-size: 100%;
   height: fit-content;
+  background-color: rgb(247, 247, 247);
 
 }
 
 /* Style the back side */
 .flip-card-back {
-  background-image: url("../Images/Screen\ Shot\ 2020-03-04\ at\ 10.05.01\ PM.png");
   color: #3a3a39;
   -webkit-box-shadow: 10px 10px 34px -10px rgba(62,74,92,0.82);
   -moz-box-shadow: 10px 10px 34px -10px rgba(62,74,92,0.82);
   box-shadow: 10px 10px 34px -10px rgba(62,74,92,0.82);
   transform: rotateY(180deg);
-  height: 100%;
-}
+  background-color: rgb(199, 206, 219);
 
+}
 
 .hr-card {
   max-width: 96%;
@@ -179,6 +183,7 @@ max-height: 96%;
 
 .h2-responsive {
   padding: 3%;
+
 }
 
 .divider-gradient {
@@ -187,7 +192,7 @@ max-height: 96%;
 }
 
 #main {
-  height: 150px;
+  height: fit-content;
   width: 100%;
  
 }
@@ -256,3 +261,131 @@ h1 {
     margin: 0 0 5px;
     color: #777;
 }
+/* Data table css */
+table {
+  width: 100%;
+  border-top: 0px;
+  border-bottom: 0px;
+  background-color: #ffffff;
+  display: inline-block;
+  border-collapse: collapse;
+  margin: 10px auto;
+  
+
+}
+
+thead {
+  display: inline-block;
+  width: fit-content;
+  height: inherit;
+  margin-bottom: 30px;
+  border-collapse: collapse;
+  font-family: district-pro, sans-serif;
+
+
+}
+tbody {
+  display: inline-block;
+  height: 50vh;
+  overflow-y: auto;    
+  overflow-x: hidden; 
+  width: 100%;
+  border-collapse: collapse;
+  font-family: district-pro, sans-serif;
+
+  
+}
+tr, td {
+  
+  border-collapse: collapse;
+  text-align: left;
+  font-family: district-pro, sans-serif;
+
+}
+.table-responsive {
+  max-width: 100%;
+  width: 100%;
+}
+.table-wrap {
+  width: 100%;
+  overflow-y: auto;
+  overflow-x: hidden;
+
+}
+
+.my-custom-scrollbar {
+  position: relative;
+  height: 100%;
+  overflow: auto;
+  width: 100%;
+  }
+
+.table-wrapper-scroll-y {
+  display: block;
+  width: 100%;
+  }
+#MyTable td:hover {
+    background: #cccccc;
+    }
+
+#DataTable {
+    background-color: #F6F6FC;
+}
+
+#MyHover a:hover {
+    background: #67737F;
+  }
+
+#Cover {
+    background-color: #ffffff;
+    -webkit-box-shadow: -5px 2px 6px -1px rgba(114,114,114,0.64), -5px 2px 6px -1px rgba(114,114,114,0.64); 
+    box-shadow: -5px 2px 6px -1px rgba(114,114,114,0.64), -5px 2px 6px -1px rgba(114,114,114,0.64);
+    padding: 2%;
+}
+tr th:nth-child(1) { 
+  width: 10%; 
+}
+
+tr th:nth-child(2) { 
+  width: 25%; 
+}
+tr th:nth-child(3) { 
+  width: 15%; 
+}
+tr th:nth-child(4) { 
+  width: 15%; 
+}
+
+tr th:nth-child(5) { 
+    width: 20%; 
+}
+tr th:nth-child(6) { 
+  width: 15%; 
+}
+
+tr td:nth-child(1) { 
+  width: 10%; 
+}
+
+tr td:nth-child(2) { 
+  width: 25%; 
+}
+tr td:nth-child(3) { 
+  width: 15%; 
+}
+tr td:nth-child(4) { 
+  width: 15%; 
+}
+
+tr td:nth-child(5) { 
+    width: 20%; 
+}
+tr td:nth-child(6) { 
+  width: 15%; }
+
+.col-md-12 {
+    max-width: 100%; 
+    font-family: district-pro, sans-serif;
+    width: fit-content;
+}
+
