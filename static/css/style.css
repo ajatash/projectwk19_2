@@ -26,6 +26,11 @@ font-size: 20px;
 font-family: district-pro, sans-serif;
 }
 
+h5 {
+font-size: 14px;
+font-family: district-pro, sans-serif;
+}
+
 p {
 font-family: proxima-nova, sans-serif;
 }
@@ -110,18 +115,18 @@ font-family: proxima-nova, sans-serif;
   padding: 0%;
   margin: 0%;
   font-family: district-pro, sans-serif;
- 
+
 
 }
 .img-size {
   max-width: 100%;
   }
-  
+
   .img-card {
   max-width: 96%;
   max-height: 96%;
   }
-  
+
 
 .flip-card {
   width: 100%;
@@ -151,7 +156,7 @@ font-family: proxima-nova, sans-serif;
   height: fit-content;
   -webkit-backface-visibility: hidden; /* Safari */
   backface-visibility: hidden;
- 
+
 }
 
 /* Style the front side (fallback if image is missing) */
@@ -194,7 +199,7 @@ font-family: proxima-nova, sans-serif;
 #main {
   height: fit-content;
   width: 100%;
- 
+
 }
 
 #myPadding {
@@ -270,7 +275,7 @@ table {
   display: inline-block;
   border-collapse: collapse;
   margin: 10px auto;
-  
+
 
 }
 
@@ -287,16 +292,16 @@ thead {
 tbody {
   display: inline-block;
   height: 50vh;
-  overflow-y: auto;    
-  overflow-x: hidden; 
+  overflow-y: auto;
+  overflow-x: hidden;
   width: 100%;
   border-collapse: collapse;
   font-family: district-pro, sans-serif;
 
-  
+
 }
 tr, td {
-  
+
   border-collapse: collapse;
   text-align: left;
   font-family: district-pro, sans-serif;
@@ -338,54 +343,53 @@ tr, td {
 
 #Cover {
     background-color: #ffffff;
-    -webkit-box-shadow: -5px 2px 6px -1px rgba(114,114,114,0.64), -5px 2px 6px -1px rgba(114,114,114,0.64); 
+    -webkit-box-shadow: -5px 2px 6px -1px rgba(114,114,114,0.64), -5px 2px 6px -1px rgba(114,114,114,0.64);
     box-shadow: -5px 2px 6px -1px rgba(114,114,114,0.64), -5px 2px 6px -1px rgba(114,114,114,0.64);
     padding: 2%;
 }
-tr th:nth-child(1) { 
-  width: 10%; 
+tr th:nth-child(1) {
+  width: 10%;
 }
 
-tr th:nth-child(2) { 
-  width: 25%; 
+tr th:nth-child(2) {
+  width: 25%;
 }
-tr th:nth-child(3) { 
-  width: 15%; 
+tr th:nth-child(3) {
+  width: 15%;
 }
-tr th:nth-child(4) { 
-  width: 15%; 
-}
-
-tr th:nth-child(5) { 
-    width: 20%; 
-}
-tr th:nth-child(6) { 
-  width: 15%; 
+tr th:nth-child(4) {
+  width: 15%;
 }
 
-tr td:nth-child(1) { 
-  width: 10%; 
+tr th:nth-child(5) {
+    width: 20%;
+}
+tr th:nth-child(6) {
+  width: 15%;
 }
 
-tr td:nth-child(2) { 
-  width: 25%; 
-}
-tr td:nth-child(3) { 
-  width: 15%; 
-}
-tr td:nth-child(4) { 
-  width: 15%; 
+tr td:nth-child(1) {
+  width: 10%;
 }
 
-tr td:nth-child(5) { 
-    width: 20%; 
+tr td:nth-child(2) {
+  width: 25%;
 }
-tr td:nth-child(6) { 
+tr td:nth-child(3) {
+  width: 15%;
+}
+tr td:nth-child(4) {
+  width: 15%;
+}
+
+tr td:nth-child(5) {
+    width: 20%;
+}
+tr td:nth-child(6) {
   width: 15%; }
 
 .col-md-12 {
-    max-width: 100%; 
+    max-width: 100%;
     font-family: district-pro, sans-serif;
     width: fit-content;
 }
-

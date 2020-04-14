@@ -1,12 +1,13 @@
 import numpy as np
-
+import os
 import sqlalchemy
 from sqlalchemy.ext.automap import automap_base
 from sqlalchemy.orm import Session
 from sqlalchemy import create_engine, func
-
-from flask import Flask, jsonify, render_template
+import json
+from flask import Flask, jsonify, render_template, send_file
 from flask_json import FlaskJSON, JsonError, json_response, as_json
+
 
 
 #################################################
@@ -29,7 +30,7 @@ print(Counties)
 # Flask Setup
 #################################################
 app = Flask(__name__)
-FlaskJSON(app)
+# FlaskJSON(app)
 
 
 #################################################
@@ -70,7 +71,27 @@ def counties():
         all_counties.append(counties_dict)
 
     return jsonify(all_counties)
-    return json_response(results)
+    # return json_response(results)
+
+@app.route('/geodata')
+# https://stackoverflow.com/questions/45910122/retriving-json-from-flask-endpoint
+def get_county_geojson():
+
+    parent_path = '\\'.join(os.path.realpath(__file__).split('\\')[:-1])
+    file_path = os.path.join(parent_path, 'data\\MN_counties.geojson')
+    with open(file_path, 'r') as file_data:
+        json_data = json.load(file_data)
+    return jsonify(json_data)
+
+@app.route('/covid_geodata')
+# https://stackoverflow.com/questions/45910122/retriving-json-from-flask-endpoint
+def get_covid_geojson():
+
+    parent_path = '\\'.join(os.path.realpath(__file__).split('\\')[:-1])
+    file_path = os.path.join(parent_path, 'data\\COVID19_Cases_US.geojson')
+    with open(file_path, 'r') as file_data:
+        json_data = json.load(file_data)
+    return jsonify(json_data)
 
 
 
