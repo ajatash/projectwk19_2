@@ -14,7 +14,7 @@ from flask_json import FlaskJSON, JsonError, json_response, as_json
 # Database Setup
 #################################################
 
-connection_string = "postgres:Marshall2020!@localhost:5432/covid_db"
+connection_string = "postgres:postgres@localhost:5432/covid_db"
 engine = create_engine(f'postgresql://{connection_string}')
 # engine = create_engine("sqlite:///titanic.sqlite")
 
@@ -88,9 +88,10 @@ def counties():
 # https://stackoverflow.com/questions/45910122/retriving-json-from-flask-endpoint
 def get_county_geojson():
 
-    parent_path = '\\'.join(os.path.realpath(__file__).split('\\')[:-1])
-    file_path = os.path.join(parent_path, 'data\\MN_counties.geojson')
-    with open(file_path, 'r') as file_data:
+    # parent_path = '\\'.join(os.path.realpath(__file__).split('\\')[:-1])
+    # file_path = os.path.join(parent_path, 'data\\MN_counties.geojson')
+    path = "data\\MN_counties.geojson"
+    with open(path, 'r') as file_data:
         json_data = json.load(file_data)
     return jsonify(json_data)
 
@@ -98,9 +99,10 @@ def get_county_geojson():
 # https://stackoverflow.com/questions/45910122/retriving-json-from-flask-endpoint
 def get_covid_geojson():
 
-    parent_path = '\\'.join(os.path.realpath(__file__).split('\\')[:-1])
-    file_path = os.path.join(parent_path, 'data\\COVID19_Cases_US.geojson')
-    with open(file_path, 'r') as file_data:
+    # parent_path = '\\'.join(os.path.realpath(__file__).split('\\')[:-1])
+    # file_path = os.path.join(parent_path, 'data\\COVID19_Cases_US.geojson')
+    path = "data\\MN_counties.geojson"
+    with open(path, 'r') as file_data:
         json_data = json.load(file_data)
     return jsonify(json_data)
 
