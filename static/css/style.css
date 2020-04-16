@@ -1,5 +1,5 @@
 html, body {
-  background-color: #bebaba;
+  background-image: linear-gradient(to bottom, rgba(62,74,92,0.32),  rgba(255, 255, 255, 0.12));
   height: 100%;
   width: 100%;
   font-family: district-pro, sans-serif;
@@ -36,7 +36,7 @@ font-family: proxima-nova, sans-serif;
 }
 
 .navbar {
-  background-image: url("covidbanner.svg");
+  background-image: url("covidbanner2.svg");
   background-size: cover;
   width: 100%;
 
@@ -71,7 +71,7 @@ font-family: proxima-nova, sans-serif;
 
 /* When you mouse over the navigation links, change their color */
 .sidebar a:hover {
-  color: #f1f1f1;
+  color: #920f0f;
 }
 
 /* Position and style the close button (top right corner) */
@@ -92,6 +92,7 @@ font-family: proxima-nova, sans-serif;
   color: rgb(44, 43, 43);
   padding: 10px 15px;
   border: none;
+  
 }
 
 .openbtn:hover {
@@ -115,14 +116,14 @@ font-family: proxima-nova, sans-serif;
   padding: 0%;
   margin: 0%;
   font-family: district-pro, sans-serif;
-
+  background-image: linear-gradient(to bottom, rgba(62,74,92,0.32),  rgba(255, 255, 255, 0.12));
 
 }
 .img-size {
   max-width: 100%;
   }
 
-  .img-card {
+.img-card {
   max-width: 96%;
   max-height: 96%;
   }
@@ -177,7 +178,7 @@ font-family: proxima-nova, sans-serif;
   -moz-box-shadow: 10px 10px 34px -10px rgba(62,74,92,0.82);
   box-shadow: 10px 10px 34px -10px rgba(62,74,92,0.82);
   transform: rotateY(180deg);
-  background-color: rgb(199, 206, 219);
+  background-color: rgb(247, 247, 247);
 
 }
 
