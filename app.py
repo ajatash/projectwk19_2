@@ -14,7 +14,7 @@ from flask_json import FlaskJSON, JsonError, json_response, as_json
 # Database Setup
 #################################################
 
-connection_string = "postgres:postgres@localhost:5432/covid_db"
+connection_string = "postgres:Marshall2020!@localhost:5432/covid_db"
 engine = create_engine(f'postgresql://{connection_string}')
 # engine = create_engine("sqlite:///titanic.sqlite")
 
@@ -49,6 +49,17 @@ def index():
 #         f"/api/v1.0/passengers"
 #     )
 
+@app.route("/about")
+def about():
+    return render_template("about.html")
+
+@app.route("/data_tables")
+def data_tables():
+    return render_template("data_tables.html")
+
+@app.route("/visuals")
+def visuals():
+    return render_template("visuals.html")
 
 @app.route("/data")
 def counties():
