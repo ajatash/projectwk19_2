@@ -5,7 +5,7 @@ from sqlalchemy.ext.automap import automap_base
 from sqlalchemy.orm import Session
 from sqlalchemy import create_engine, func
 import json
-from flask import Flask, jsonify, render_template, send_file
+from flask import Flask, jsonify, render_template, send_file, request, url_for, redirect 
 from flask_json import FlaskJSON, JsonError, json_response, as_json
 
 
@@ -49,18 +49,18 @@ def index():
 #         f"/api/v1.0/passengers"
 #     )
 
+
 @app.route("/about")
 def about():
     return render_template("about.html")
-
 @app.route("/data_tables")
 def data_tables():
     return render_template("data_tables.html")
-
 @app.route("/visuals")
 def visuals():
     return render_template("visuals.html")
 
+    
 @app.route("/data")
 def counties():
     # Create our session (link) from Python to the DB
