@@ -38,7 +38,7 @@ Base.prepare(engine, reflect=True)
 
 
 
-Save reference to the table
+# Save reference to the table
 Counties = Base.classes.counties
 print(Counties)
 #################################################
@@ -106,7 +106,7 @@ def get_county_geojson():
 
     # parent_path = '\\'.join(os.path.realpath(__file__).split('\\')[:-1])
     # file_path = os.path.join(parent_path, 'data\\MN_counties.geojson')
-    path = "data\\MN_counties.geojson"
+    path = "data/MN_counties.geojson"
     with open(path, 'r') as file_data:
         json_data = json.load(file_data)
     return jsonify(json_data)
@@ -117,7 +117,7 @@ def get_covid_geojson():
 
     # parent_path = '\\'.join(os.path.realpath(__file__).split('\\')[:-1])
     # file_path = os.path.join(parent_path, 'data\\COVID19_Cases_US.geojson')
-    path = "data\\MN_counties.geojson"
+    path = "data/MN_counties.geojson"
     with open(path, 'r') as file_data:
         json_data = json.load(file_data)
     return jsonify(json_data)

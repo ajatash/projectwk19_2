@@ -394,3 +394,9 @@ tr td:nth-child(6) {
     font-family: district-pro, sans-serif;
     width: fit-content;
 }
+
+.container-dashboard {
+  padding-left: 4%;
+  padding-top: 2%;
+  padding-right: 2%;
+}

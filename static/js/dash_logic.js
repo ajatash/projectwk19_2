@@ -1,6 +1,6 @@
 function dashboard(id, fData){
-    var barColor = 'steelblue';
-    function segColor(c){ return {Seniors:"#807dba", Other:"#41ab5d"}[c]; }
+    var barColor = 'darkgray';
+    function segColor(c){ return {Seniors:"red", Other:"black"}[c]; }
     
     // compute total for each county.
     fData.forEach(function(d){d.total=d.freq.Seniors+d.freq.Other;});
@@ -8,8 +8,8 @@ function dashboard(id, fData){
     // function to handle histogram.
     function histoGram(fD){
         var hG={},    hGDim = {t: 60, r: 0, b: 30, l: 0};
-        hGDim.w = 500 - hGDim.l - hGDim.r, 
-        hGDim.h = 300 - hGDim.t - hGDim.b;
+        hGDim.w = 1000 - hGDim.l - hGDim.r, 
+        hGDim.h = 600 - hGDim.t - hGDim.b;
             
         //create svg for histogram.
         var hGsvg = d3.select(id).append("svg")
@@ -90,7 +90,7 @@ function dashboard(id, fData){
     
     // function to handle pieChart.
     function pieChart(pD){
-        var pC ={},    pieDim ={w:250, h: 250};
+        var pC ={},    pieDim ={w:500, h: 500};
         pieDim.r = Math.min(pieDim.w, pieDim.h) / 2;
                 
         // create svg for pie chart.
@@ -194,6 +194,25 @@ function dashboard(id, fData){
         pC = pieChart(tF), // create the pie-chart.
         leg= legend(tF);  // create the legend.
 }
+
+console.log("party");
+
+// var county = [];
+var Seniors = [];
+var Population = [];
+
+
+
+d3.json("/data", function(data) {
+    console.log(data);
+    var county = data[0].cty_name;
+    var Seniors = data[1].over_65_total;
+    var Population = data[3].pop;
+    console.log(county);
+    console.log(Seniors);
+    console.log(Population);
+});
+
 
 var freqData=[
 {County:'Hennepin',freq:{Seniors:158332, Other:1066431}}
