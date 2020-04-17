@@ -6,9 +6,8 @@ from sqlalchemy.ext.automap import automap_base
 from sqlalchemy.orm import Session
 from sqlalchemy import create_engine, func
 import json
-from flask import Flask, jsonify, render_template, send_file, request, url_for, redirect
+from flask import Flask, jsonify, render_template, send_file, request, url_for, redirect 
 from flask_json import FlaskJSON, JsonError, json_response, as_json
-# from bson.json_util import dumps
 
 
 
@@ -17,43 +16,31 @@ from flask_json import FlaskJSON, JsonError, json_response, as_json
 #################################################
 
 # Create connection variable
-# conn = 'mongodb://localhost:27017'
+conn = 'mongodb://localhost:27017'
 
-# # Pass connection to the pymongo instance.
-# client = PyMongo.MongoClient(conn)
+# Pass connection to the pymongo instance.
+client = pymongo.MongoClient(conn)
 
 # Connect to a database. Will create one if not already available.
-# db = client.COVID_19
-# collection = db.MNCounties
-
-
-# Use flask_pymongo to set up mongo connection
-
-app = Flask(__name__)
-app.config["MONGO_URI"] = "mongodb://localhost:27017/COVID_19"
-mongo = PyMongo(app)
-
-# Or set inline
-# mongo = PyMongo(app, uri="mongodb://localhost:27017/COVID_19")
-
+db = client.COVID_19
 
 #################################################
 # Database Setup Postgres
 #################################################
 
-# connection_string = "postgres:postgres@localhost:5432/covid_db"
-# engine = create_engine(f'postgresql://{connection_string}')
+connection_string = "postgres:postgres@localhost:5432/covid_db"
+engine = create_engine(f'postgresql://{connection_string}')
 
 # reflect an existing database into a new model
-# Base = automap_base()
-# # reflect the tables
-# Base.prepare(engine, reflect=True)
+Base = automap_base()
+# reflect the tables
+Base.prepare(engine, reflect=True)
 
 
 
-# Save reference to the table
-# Counties = Base.classes.counties
-# print(Counties)
+Save reference to the table
+Counties = Base.classes.counties
+print(Counties)
 #################################################
 # Flask Setup
 #################################################
@@ -67,7 +54,7 @@ app = Flask(__name__)
 
 @app.route("/")
 def index():
-    # print(Counties)
+    print(Counties)
     return render_template("index.html")
 
 @app.route("/about")
@@ -76,20 +63,20 @@ def about():
 
 @app.route("/data_tables")
 def data_tables():
+    covid_counties = mongo.db.collection.find()
     return render_template("data_tables.html")
 
 @app.route("/visuals")
 def visuals():
 
-# write a statement that finds all the items in the db and sets it to a variable
-    # countylist = list(db.collection.find())
-    # print(countylist)
-
+    # Store the entire team collection in a list
+    counties = list(db.COVID_19.find())
+    print(counties)
 
     # Return the template with the teams list passed in
-    return render_template('visuals.html')
-    # return render_template('visuals.html', countylist=countylist)
+    return render_template('visuals.html', counties=counties)
 
+    
 @app.route("/data")
 def counties():
     # Create our session (link) from Python to the DB
@@ -130,7 +117,7 @@ def get_covid_geojson():
 
     # parent_path = '\\'.join(os.path.realpath(__file__).split('\\')[:-1])
     # file_path = os.path.join(parent_path, 'data\\COVID19_Cases_US.geojson')
-    path = "data\\COVID19_Cases_US.geojson"
+    path = "data\\MN_counties.geojson"
     with open(path, 'r') as file_data:
         json_data = json.load(file_data)
     return jsonify(json_data)
