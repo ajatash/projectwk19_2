@@ -6,7 +6,7 @@ from sqlalchemy.ext.automap import automap_base
 from sqlalchemy.orm import Session
 from sqlalchemy import create_engine, func
 import json
-from flask import Flask, jsonify, render_template, send_file, request, url_for, redirect 
+from flask import Flask, jsonify, render_template, send_file, request, url_for, redirect
 from flask_json import FlaskJSON, JsonError, json_response, as_json
 # from bson.json_util import dumps
 
@@ -81,6 +81,7 @@ def data_tables():
 @app.route("/visuals")
 def visuals():
 
+<<<<<<< HEAD
 # write a statement that finds all the items in the db and sets it to a variable
     # countylist = list(db.collection.find())
     # print(countylist)
@@ -90,6 +91,9 @@ def visuals():
     return render_template('visuals.html')
     # return render_template('visuals.html', countylist=countylist)
     
+=======
+
+>>>>>>> 7df0e91161e009a19424d989db69ca13841eeda9
 @app.route("/data")
 def counties():
     # Create our session (link) from Python to the DB
@@ -130,7 +134,7 @@ def get_covid_geojson():
 
     # parent_path = '\\'.join(os.path.realpath(__file__).split('\\')[:-1])
     # file_path = os.path.join(parent_path, 'data\\COVID19_Cases_US.geojson')
-    path = "data\\MN_counties.geojson"
+    path = "data\\COVID19_Cases_US.geojson"
     with open(path, 'r') as file_data:
         json_data = json.load(file_data)
     return jsonify(json_data)

@@ -1,8 +1,3 @@
-// // test pulling in county tabular data
-// $.getJSON("/data", function(data) {
-//   console.log(data);
-// })
-
 // Creating map object
 var myMap = L.map("map", {
   center: [46.000996, -94.789513],
@@ -28,8 +23,10 @@ L.tileLayer("https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={
 // var geoData = "../data/MN_counties.geojson";
 
 // Grab data with jquery from flask app
-$.getJSON("/geodata", function(data) {
-  console.log(data);
+// $.getJSON("/geodata", function(data) {
+d3.json("/geodata", function(data) {
+  var countyData = data.features;
+  console.log(countyData);
 
   var counties;
 
@@ -44,9 +41,9 @@ $.getJSON("/geodata", function(data) {
        fillOpacity: 0.7
    });
 
-   if (!L.Browser.ie && !L.Browser.opera && !L.Browser.edge) {
-       layer.bringToFront();
-   }
+   // if (!L.Browser.ie && !L.Browser.opera && !L.Browser.edge) {
+   //     layer.bringToFront();
+   // }
    info.update(layer.feature.properties);
   }
 
@@ -65,20 +62,17 @@ $.getJSON("/geodata", function(data) {
 
     // Define what  property in the features to use
     valueProperty: "Percent Age Ovr 65",
-
     // Set color scale
     scale: ["ffffcc", "#253494"],
-
     // Number of breaks in step range
     steps: 5,
-
-    // q for quartile, e for equidistant, k for k-means
+    // q for quartile
     mode: "q",
     style: {
       // Border color
       color: "orange",
       weight: 1,
-      fillOpacity: 0.8
+      fillOpacity: 0.7
     },
 
 
@@ -98,7 +92,6 @@ $.getJSON("/geodata", function(data) {
     pane: 'polygons'
   })//.addTo(myMap);
 
-  console.log(counties);
   // geojson.moveToBack();
   counties.addTo(myMap);
 
@@ -113,7 +106,11 @@ $.getJSON("/geodata", function(data) {
     // method that we will use to update the control based on feature properties passed
     info.update = function (props) {
         this._div.innerHTML = '<h4>MN Vulnerable Populations</h4>' +  (props ?
-            '<b>' + props.Name + '</b><br />Total pop: ' + props.Population + '<br>Total Over 65: ' + props.TotalAgeOvr65 + '<br>'
+            '<b>' + props.Name + '</b><br />Total pop: ' +
+            props.Population + '<br>Total Over 65: ' +
+            props.TotalAgeOvr65 + '<br>% Over 65: ' +
+            props["Percent Age Ovr 65"] + '<br>Confirmed COVID 19 Cases: ' +
+            props.Confirmed
             : 'Hover over a state');
     };
 
@@ -165,14 +162,18 @@ function chooseRadius(confirmed){
 // local file
 // var covid_geojson = "../data/COVID19_Cases_US.geojson";
 
-// Grab data with jquery from flask app
-$.getJSON("/covid_geodata", function(data) {
+// Grab data with jquery or d3 from flask app
+// $.getJSON("/covid_geodata", function(data) {
+d3.json("/covid_geodata", function(data) {
   var covidData = data.features;
+  // var covidFiltered = covidData.filter(function(d) {
+  //   return d.Province_State === "Minnesota" });
+  console.log(covidData);
   function oneachfeature(feature, layer) {
     // https://gis.stackexchange.com/questions/166252/geojson-layer-order-in-leaflet-0-7-5/167904#167904
     layer.options.zIndex = 650;
-    layer.bindPopup("<h3>" + feature.properties.Combined_Key +
-      "</h3><hr><p>Confirmed cases:" + (feature.properties.Confirmed) +
+    layer.bindPopup("<h4>" + feature.properties.Combined_Key +
+      "</h4><hr><p>Confirmed cases: " + (feature.properties.Confirmed) +
        "</p><hr><p>" + new Date(feature.properties.Last_Update) + "</p>");
     if (!L.Browser.ie && !L.Browser.opera && !L.Browser.edge) {
            layer.bringToFront();
@@ -183,7 +184,7 @@ $.getJSON("/covid_geodata", function(data) {
     pointToLayer: function(feature,latlng){
 	  return new L.CircleMarker(latlng, {
       radius: chooseRadius(feature.properties.Confirmed),
-      fillOpacity: .7,
+      fillOpacity: 1,
       fillColor: "#ce1432",
       weight: 0,
       color: "#999"}); // feature.properties.mag
