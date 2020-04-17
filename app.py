@@ -1,3 +1,4 @@
+  
 import numpy as np
 import os
 from flask_pymongo import PyMongo
@@ -81,10 +82,6 @@ def data_tables():
 @app.route("/visuals")
 def visuals():
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> c807ae37d63411330a0f8993005a19c6c4f00562
 # write a statement that finds all the items in the db and sets it to a variable
     # countylist = list(db.collection.find())
     # print(countylist)
@@ -93,14 +90,7 @@ def visuals():
     # Return the template with the teams list passed in
     return render_template('visuals.html')
     # return render_template('visuals.html', countylist=countylist)
-<<<<<<< HEAD
-    
-=======
 
->>>>>>> 7df0e91161e009a19424d989db69ca13841eeda9
-=======
-
->>>>>>> c807ae37d63411330a0f8993005a19c6c4f00562
 @app.route("/data")
 def counties():
     # Create our session (link) from Python to the DB
@@ -150,4 +140,3 @@ def get_covid_geojson():
 
 if __name__ == '__main__':
     app.run(debug=True)
-
