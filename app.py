@@ -41,7 +41,7 @@ from flask import Flask, jsonify, render_template, send_file, request, url_for, 
 # Database Setup Postgres
 #################################################
 
-connection_string = "postgres:Marshall2020!@localhost:5432/covid_db"
+connection_string = "postgres:postgres@localhost:5432/covid_db"
 engine = create_engine(f'postgresql://{connection_string}')
 
 # reflect an existing database into a new model
