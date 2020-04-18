@@ -323,7 +323,7 @@ tr, td {
   position: relative;
   height: 100%;
   overflow: auto;
-  width: 100%;
+  width: auto;
   }
 
 .table-wrapper-scroll-y {
@@ -391,6 +391,7 @@ tr td:nth-child(6) {
 
 .col-md-12 {
     max-width: 100%;
+    width: 100%;
     font-family: district-pro, sans-serif;
     width: fit-content;
 }
@@ -400,3 +401,4 @@ tr td:nth-child(6) {
   padding-top: 2%;
   padding-right: 2%;
 }
+
