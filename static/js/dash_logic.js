@@ -1,6 +1,6 @@
 function dashboard(id, fData){
-    var barColor = 'darkgray';
-    function segColor(c){ return {Seniors:"red", Other:"black"}[c]; }
+    var barColor = 'lightslategrey';
+    function segColor(c){ return {Seniors:"red", Other:"dimgray"}[c]; }
     
     // compute total for each county.
     fData.forEach(function(d){d.total=d.freq.Seniors+d.freq.Other;});
